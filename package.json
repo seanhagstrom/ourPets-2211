@@ -2,7 +2,7 @@
   "name": "ourPets-demo",
   "version": "1.0.0",
   "description": "",
-  "main": "seed.js",
+  "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "start:dev": "nodemon index.js",
