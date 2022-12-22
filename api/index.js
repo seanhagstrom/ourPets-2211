@@ -12,7 +12,7 @@ const { getCompanionById } = require('../db');
 // Authorization middleware verify the jwt is valid and attach the user to the req.
 router.use(async (req, res, next) => {
   try {
-    console.log('These are my request header: ', req.headers);
+    // console.log('These are my request header: ', req.headers);
     const auth = req.header('Authorization');
     // console.log('auth is: ', auth);
 
@@ -39,17 +39,17 @@ router.use(async (req, res, next) => {
 });
 
 // Test to see if companion was added to request.
-router.use(async (req, res, next) => {
-  try {
-    console.log(
-      'Yay, our companion has been added to our request',
-      req.companion
-    );
-    next();
-  } catch (error) {
-    next(error);
-  }
-});
+// router.use(async (req, res, next) => {
+//   try {
+//     console.log(
+//       'Yay, our companion has been added to our request',
+//       req.companion
+//     );
+//     next();
+//   } catch (error) {
+//     next(error);
+//   }
+// });
 
 /***sub routers below ***/
 const petsRouter = require('./pets');

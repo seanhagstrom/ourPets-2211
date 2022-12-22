@@ -9,13 +9,13 @@ client.connect();
 app.use(morgan('dev'));
 app.use(express.json());
 
-app.use((req, res, next) => {
-  console.log('<____Body Logger START____>');
-  console.log(req.body);
-  console.log('<_____Body Logger END_____>');
+// app.use((req, res, next) => {
+//   console.log('<____Body Logger START____>');
+//   console.log(req.body);
+//   console.log('<_____Body Logger END_____>');
 
-  next();
-});
+//   next();
+// });
 
 app.get('/', (req, res) => {
   res.send('Hello World from app.js!');
